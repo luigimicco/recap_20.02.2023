@@ -31,7 +31,7 @@
                                     <th scope="col">ISBN</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">Author</th>
-                                    <th scope="col">Soldaout</th>
+                                    <th scope="col">Soldout</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
