@@ -34,7 +34,7 @@
                                     <th scope="col">Pages</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Year</th>
-                                    <th scope="col">Soldaout</th>
+                                    <th scope="col">Soldout</th>
                                     <th scope="col"></th>
                                 </tr>
                             </thead>
