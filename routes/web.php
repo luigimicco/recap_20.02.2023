@@ -18,10 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-/*
-
-*/
-Route::get('/books/trashed', [BooksController::class, 'trashed'])->name('books.trashed');
-Route::get('/books/{book}/restore', [BooksController::class, 'restore'])->name('books.restore');
-Route::delete('/books/{book}/force-delete', [BooksController::class, 'forceDelete'])->name('books.force-delete');
 Route::resource('/books', BooksController::class);

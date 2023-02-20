@@ -154,44 +154,6 @@ class BookController extends Controller
     {
         $book->delete();
 
-        return redirect()->route('books.index')->with('message', 'Moved to recycled bin')->with('alert-type', 'alert-danger');
-    }
-
-    /**
-     * Display a listing of trashed resources.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function trashed()
-    {
-
-        $books = Book::onlyTrashed()->get();
-        return view('books.trashed', compact('books'));
-    }
-
-    /**
-     *  Restore book data
-     * 
-     * @param Book $book
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function restore($id)
-    {
-        Book::where('id', $id)->withTrashed()->restore();
-        return redirect()->route('books.index')->with('message', "Restored successfully")->with('alert-type', 'alert-success');
-    }
-
-    /**
-     * Force delete book data
-     * 
-     * @param Book $book
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function forceDelete($id)
-    {
-        Book::where('id', $id)->withTrashed()->forceDelete();
-        return redirect()->route('books.index')->with('message', "Delete definitely")->with('alert-type', 'alert-success');
+        return redirect()->route('books.index')->with('message', 'Delete successfully')->with('alert-type', 'alert-danger');
     }
 }

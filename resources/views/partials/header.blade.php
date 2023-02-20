@@ -7,7 +7,6 @@
                   <span class="navbar-text">
                     <a class="btn btn-link" href="{{ route('home') }}">Home</a>
                     <a  class="btn btn-link" href="{{ route('books.index') }}">Books</a>
-                    <a  class="btn btn-link" href="{{ route('books.trashed') }}">Recycled bin</a>
                   </span>
               </div>
       </div>
