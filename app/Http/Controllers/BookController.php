@@ -128,16 +128,10 @@ class BookController extends Controller
     {
         $data = $request->all();
 
-        // required|string|size:13|unique:books        
-
         $newRules = $this->rules;
         $newRules['ISBN'] = ['required', 'string', 'size:13', Rule::unique('books')->ignore($book->id)];
 
         $request->validate($newRules, $this->messages);
-
-        if (!array_key_exists('soldout', $data)) {
-            $data['soldout'] = false;
-        }
 
         //$book = Book::findOrFail($id);
         $book->update($data);
